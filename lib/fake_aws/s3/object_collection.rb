@@ -18,6 +18,10 @@ module FakeAWS
         @objects[key]
       end
 
+      def delete_all
+        @objects.clear
+      end
+
       include Enumerable
 
       def each(&block)

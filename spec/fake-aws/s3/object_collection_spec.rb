@@ -53,6 +53,15 @@ describe FakeAWS::S3::ObjectCollection do
 
     end
 
+    describe "#delete_all" do
+
+      it "removes all the objects" do
+        objects.delete_all
+        objects.should be_empty
+      end
+
+    end
+
   end
 
   context "after referencing some objects (without writing content)" do
