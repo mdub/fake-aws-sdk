@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["mdub@dogbiscuit.org"]
   gem.description   = %q{Fake implementation of AWS SDK}
   gem.summary       = gem.description
-  gem.homepage      = "http://github.com/cogent/fake-aws-sdk"
+  gem.homepage      = "http://github.com/mdub/fake-aws-sdk"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
