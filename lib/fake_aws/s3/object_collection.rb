@@ -18,7 +18,15 @@ module FakeAWS
         @objects[key]
       end
 
+      def delete_all
+        @objects.clear
+      end
+
       include Enumerable
+
+      def delete_if(&block)
+        @objects.delete_if(&block)
+      end
 
       def each(&block)
         @objects.values.select(&:exists?).sort_by(&:key).each(&block)
