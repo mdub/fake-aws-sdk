@@ -62,6 +62,24 @@ describe FakeAWS::S3::ObjectCollection do
 
     end
 
+    describe "#delete_if" do
+
+      before do
+        objects["hello/a.txt"].write("CONTENT")
+        objects["world/a.txt"].write("CONTENT")
+        objects.delete_if { |key| key =~ /hello/ }
+      end
+
+      it "deletes the hello folder" do
+        expect(objects["hello/a.txt"]).to_not exist
+      end
+
+      it "does not delete the world folder" do
+        expect(objects["world/a.txt"]).to exist
+      end
+      
+    end
+
   end
 
   context "after referencing some objects (without writing content)" do

@@ -22,6 +22,10 @@ module FakeAWS
         @objects.clear
       end
 
+      def delete_if(&block)
+        @objects.delete_if(&block)
+      end
+
       include Enumerable
 
       def each(&block)
