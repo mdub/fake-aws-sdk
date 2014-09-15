@@ -22,11 +22,11 @@ module FakeAWS
         @objects.clear
       end
 
+      include Enumerable
+
       def delete_if(&block)
         @objects.delete_if(&block)
       end
-
-      include Enumerable
 
       def each(&block)
         @objects.values.select(&:exists?).sort_by(&:key).each(&block)
