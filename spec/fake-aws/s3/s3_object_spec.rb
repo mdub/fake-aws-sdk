@@ -264,4 +264,18 @@ describe FakeAWS::S3::S3Object do
     end
   end
 
+  describe '#metadata' do
+
+    let(:source_object) { bucket.objects["source"] }
+
+    before do
+      object.metadata[:foo] = 'bar'
+    end
+
+    it 'should return metadata' do
+      object.metadata[:foo].should eq('bar')
+    end
+
+  end
+
 end

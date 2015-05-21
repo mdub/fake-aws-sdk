@@ -6,10 +6,12 @@ module FakeAWS
       def initialize(bucket, key)
         @bucket = bucket
         @key = key
+	@metadata = {}
       end
 
       attr_reader :bucket
       attr_reader :key
+      attr_reader :metadata
 
       def write(data, options = {})
         data = data.read if data.respond_to?(:read)
