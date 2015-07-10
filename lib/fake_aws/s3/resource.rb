@@ -13,6 +13,10 @@ module FakeAWS
       attr_reader :buckets
       attr_reader :options
 
+      def bucket(name)
+        buckets[name]
+      end
+
     end
 
   end

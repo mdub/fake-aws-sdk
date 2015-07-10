@@ -12,4 +12,19 @@ describe FakeAWS::S3::Resource do
 
   end
 
+  describe "#bucket" do
+
+    let(:the_result) { fake_s3.bucket("foo") }
+
+    it "returns the named Bucket" do
+      the_result.should be_kind_of(FakeAWS::S3::Bucket)
+      the_result.name.should eql("foo")
+    end
+
+    it "always returns the same Bucket" do
+      fake_s3.bucket("foo").should equal(fake_s3.bucket("foo"))
+    end
+
+  end
+
 end
