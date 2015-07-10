@@ -27,4 +27,16 @@ describe FakeAWS::S3::Resource do
 
   end
 
+  describe "#create_bucket" do
+
+    before do
+      fake_s3.create_bucket(name: "sydney-bucket")
+    end
+
+    it "creates a Bucket" do
+      fake_s3.buckets.first.name.should eq("sydney-bucket")
+    end
+
+  end
+
 end

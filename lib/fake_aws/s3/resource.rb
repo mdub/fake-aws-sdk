@@ -17,6 +17,10 @@ module FakeAWS
         buckets[name]
       end
 
+      def create_bucket(options)
+        buckets.create(options.fetch(:name))
+      end
+
     end
 
   end
