@@ -1,17 +1,12 @@
-require "fake_aws/s3/bucket_collection"
-require "fake_aws/s3/s3_object"
+require "fake_aws/s3/resource"
 
 module FakeAWS
 
-  class S3
+  module S3
 
-    def initialize(options = {})
-      @options = options
-      @buckets = BucketCollection.new
+    def self.new(*args)
+      Resource.new(*args)
     end
-
-    attr_reader :buckets
-    attr_reader :options
 
   end
 

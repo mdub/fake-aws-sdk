@@ -1,8 +1,7 @@
 require "fake_aws/s3/s3_object"
-require "forwardable"
 
 module FakeAWS
-  class S3
+  module S3
 
     class ObjectCollection
 

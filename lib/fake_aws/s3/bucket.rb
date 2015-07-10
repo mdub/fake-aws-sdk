@@ -1,7 +1,7 @@
 require "fake_aws/s3/object_collection"
 
 module FakeAWS
-  class S3
+  module S3
 
     class Bucket
 

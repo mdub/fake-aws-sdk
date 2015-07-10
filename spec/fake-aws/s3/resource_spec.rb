@@ -1,8 +1,8 @@
-require "fake_aws/s3"
+require "fake_aws/s3/resource"
 
-describe FakeAWS::S3 do
+describe FakeAWS::S3::Resource do
 
-  let(:fake_s3) { FakeAWS::S3.new }
+  let(:fake_s3) { described_class.new }
 
   describe "#buckets" do
 

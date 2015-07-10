@@ -1,5 +1,5 @@
 module FakeAWS
-  class S3
+  module S3
 
     class S3Object
 
