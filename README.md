@@ -1,6 +1,6 @@
 # FakeAWS
 
-A fake implementation of the AWS Ruby SDK, for testing.
+This project provided a fake implementation of part of [aws-sdk-ruby, version 1](https://github.com/aws/aws-sdk-ruby/tree/aws-sdk-v1). As that version of the SDK as been superceeded, this is no longer maintained.
 
 ## Installation
 
